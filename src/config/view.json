@@ -1,0 +1,6 @@
+{
+    "fontSize": "60px",
+    "textAlign": "center",
+    "errorColor": "red",
+    "successColor": "green"
+  }

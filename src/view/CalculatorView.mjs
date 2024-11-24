@@ -1,5 +1,16 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const viewConfig = require('../config/view.json');
+
 export default class CalculatorView {
     getHtml(res, isError) {
-        return `<label style="font-size:40px; display:block; text-align:center; color:${isError ? 'red' : 'green'}">${res}</label>`
+        return `
+            <label style="
+                font-size: ${viewConfig.fontSize};
+                display: block;
+                text-align: ${viewConfig.textAlign};
+                color: ${isError ? viewConfig.errorColor : viewConfig.successColor};
+            ">${res}</label>
+        `;
     }
 }

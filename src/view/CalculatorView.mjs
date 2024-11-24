@@ -1,6 +1,4 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const viewConfig = require('../config/view.json');
+import viewConfig from "../config/view.json" with {type: 'json'};
 
 export default class CalculatorView {
     getHtml(res, isError) {
